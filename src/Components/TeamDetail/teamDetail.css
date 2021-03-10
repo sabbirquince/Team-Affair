@@ -17,10 +17,13 @@
 }
 
 .team_box {
-    width: 65%;
     padding: 1rem 1rem 1rem 2rem;
     margin-top: 1.5rem;
     border-radius: 7px;
+}
+
+.team_box h6 {
+    padding-bottom: .1rem;
 }
 
 .team_image {
@@ -28,7 +31,8 @@
 }
 
 .team_description {
-    width: 67%;
+    border-radius: 7px;
+    font-weight: 300;
 }
 
 .social_link {
@@ -37,4 +41,24 @@
 
 .social_logo {
     height: 3rem;
+}
+
+@media only screen and (max-width:1200px) {
+
+    .team_box,
+    .team_description {
+        width: 95%;
+    }
+
+}
+
+@media only screen and (max-width:576px) {
+    .team_box {
+        padding: 1rem;
+    }
+
+    .team_image {
+        height: 12rem;
+        width: 100%;
+    }
 }

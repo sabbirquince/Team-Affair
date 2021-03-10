@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
-import Team from "../Team/Team";
+import TeamCard from "../Team/TeamCard";
 
 const Main = () => {
   const [teams, setTeams] = useState([]);
@@ -16,12 +16,15 @@ const Main = () => {
   console.log(teams);
 
   return (
-    <div className="container-xl mt-5">
+    <div>
       <Header />
-      <div className="row mt-5">
-        {teams.map((team) => (
-          <Team key={team.idTeam} team={team} />
-        ))}
+
+      <div className="container-xl">
+        <div className="row mt-4">
+          {teams.map((team) => (
+            <TeamCard key={team.idTeam} team={team} />
+          ))}
+        </div>
       </div>
     </div>
   );

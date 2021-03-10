@@ -2,4 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.root {
+  min-height: 100vh;
+}
+
+.nav_brand {
+  border: 1px solid whitesmoke;
+  padding: 1rem;
+  border-radius: 4px;
 }

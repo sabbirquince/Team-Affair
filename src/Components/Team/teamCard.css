@@ -1,0 +1,16 @@
+.myCard {
+    width: 16rem;
+    margin-bottom: 1.5rem;
+}
+
+.myCardImg {
+    width: 75%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+@media only screen and (max-width:576px) {
+    .myCard {
+        width: 20rem;
+    }
+}

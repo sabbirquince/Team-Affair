@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Header from "../Header/Header";
 import Team from "../Team/Team";
 
 const Main = () => {
@@ -16,7 +17,8 @@ const Main = () => {
 
   return (
     <div className="container-xl mt-5">
-      <div className="row">
+      <Header />
+      <div className="row mt-5">
         {teams.map((team) => (
           <Team team={team} />
         ))}

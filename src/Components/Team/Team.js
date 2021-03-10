@@ -1,10 +1,16 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import { useHistory } from "react-router";
 import "./team.css";
 
 const Team = (props) => {
   const { team } = props;
-  const { strTeam, strTeamBadge, strSport } = team;
+  const { strTeam, strTeamBadge, strSport, idTeam } = team;
+
+  let history = useHistory();
+  const handleDetails = (idTeam) => {
+    history.push(`/team/${idTeam}`);
+  };
 
   return (
     <div className="col-sm-12 col-md-6 col-lg-4 text-center d-flex justify-content-center align-items-center">
@@ -14,7 +20,9 @@ const Team = (props) => {
         <Card.Body>
           <Card.Title>{strTeam}</Card.Title>
           <Card.Text>Sport Type: {strSport}</Card.Text>
-          <Button variant="primary">Explore </Button>
+          <Button onClick={() => handleDetails(idTeam)} variant="primary">
+            Explore{" "}
+          </Button>
         </Card.Body>
       </Card>
     </div>

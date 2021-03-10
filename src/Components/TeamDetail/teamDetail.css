@@ -1,0 +1,40 @@
+.team_details {
+    min-height: 100vh;
+}
+
+.banner_card {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+    border: none;
+}
+
+.banner_image {
+    height: 21rem;
+    opacity: .25;
+}
+
+.banner_card_img {
+    height: 50%;
+}
+
+.team_box {
+    width: 65%;
+    padding: 1rem 1rem 1rem 2rem;
+    margin-top: 1.5rem;
+    border-radius: 7px;
+}
+
+.team_image {
+    height: 12rem;
+}
+
+.team_description {
+    width: 67%;
+}
+
+.social_link {
+    width: 65%;
+}
+
+.social_logo {
+    height: 3rem;
+}

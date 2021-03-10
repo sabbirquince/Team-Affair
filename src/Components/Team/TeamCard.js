@@ -7,7 +7,7 @@ import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 
 const TeamCard = (props) => {
   const { team } = props;
-  const { strTeam, strTeamBadge, strSport, idTeam } = team;
+  const { strTeam, strTeamBadge, strSport, idTeam } = team || {};
 
   let history = useHistory();
   const handleDetails = (idTeam) => {

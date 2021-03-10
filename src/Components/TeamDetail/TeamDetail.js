@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Spinner } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { useParams } from "react-router";
 import "./teamDetail.css";
 import male from "../../images/Photo/male.png";
@@ -7,7 +7,6 @@ import female from "../../images/Photo/female.png";
 import twitter from "../../images/Icon/Twitter.png";
 import youtube from "../../images/Icon/YouTube.png";
 import facebook from "../../images/Icon/Facebook.png";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMapMarkerAlt,
@@ -35,27 +34,16 @@ const TeamDetail = () => {
     strTwitter,
   } = teamDetails[0] || {};
 
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${id}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
         setTeamDetails(data.teams);
-        setLoading(!loading);
       });
   }, [id]);
 
-  const spinner = (
-    <div className="d-flex justify-content-center align-items-center spinner_details">
-      <Spinner variant="light" animation="border" role="status">
-        <span className="sr-only">Loading...</span>
-      </Spinner>
-    </div>
-  );
-
-  const detailsData = (
+  return (
     <div className="py-5 team_details">
       <section className="banner">
         <Card className="bg-dark text-white banner_card ">
@@ -116,9 +104,9 @@ const TeamDetail = () => {
       </section>
 
       <section className="social_link p-3 container-xl d-flex justify-content-center">
-        <Link to={strTwitter}>
+        <a href={strTwitter}>
           <img className="social_logo" src={twitter} alt="" />
-        </Link>
+        </a>
         <a href={strFacebook}>
           <img className="social_logo" src={facebook} alt="" />
         </a>
@@ -128,8 +116,6 @@ const TeamDetail = () => {
       </section>
     </div>
   );
-
-  return <div>{loading ? spinner : detailsData}</div>;
 };
 
 export default TeamDetail;

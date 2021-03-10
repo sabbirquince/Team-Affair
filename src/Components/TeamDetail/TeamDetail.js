@@ -23,7 +23,6 @@ const TeamDetail = () => {
     strTeamBadge,
     strDescriptionEN,
     strStadiumDescription,
-    strTwitter,
     strYoutube,
     strFacebook,
   } = teamDetails[0] || {};

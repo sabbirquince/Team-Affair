@@ -20,7 +20,7 @@ const Main = () => {
       <Header />
       <div className="row mt-5">
         {teams.map((team) => (
-          <Team team={team} />
+          <Team key={team.idTeam} team={team} />
         ))}
       </div>
     </div>

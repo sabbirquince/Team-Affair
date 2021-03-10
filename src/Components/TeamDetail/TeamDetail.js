@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
+import { Card, Spinner } from "react-bootstrap";
 import { useParams } from "react-router";
 import "./teamDetail.css";
 import male from "../../images/Photo/male.png";
@@ -35,14 +35,27 @@ const TeamDetail = () => {
     strTwitter,
   } = teamDetails[0] || {};
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${id}`;
     fetch(url)
       .then((response) => response.json())
-      .then((data) => setTeamDetails(data.teams));
+      .then((data) => {
+        setTeamDetails(data.teams);
+        setLoading(!loading);
+      });
   }, [id]);
 
-  return (
+  const spinner = (
+    <div className="d-flex justify-content-center align-items-center spinner_details">
+      <Spinner variant="light" animation="border" role="status">
+        <span className="sr-only">Loading...</span>
+      </Spinner>
+    </div>
+  );
+
+  const detailsData = (
     <div className="py-5 team_details">
       <section className="banner">
         <Card className="bg-dark text-white banner_card ">
@@ -115,6 +128,8 @@ const TeamDetail = () => {
       </section>
     </div>
   );
+
+  return <div>{loading ? spinner : detailsData}</div>;
 };
 
 export default TeamDetail;

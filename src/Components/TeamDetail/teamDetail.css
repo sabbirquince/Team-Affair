@@ -43,6 +43,10 @@
     height: 3rem;
 }
 
+.spinner_details {
+    height: 95vh;
+}
+
 @media only screen and (max-width:1200px) {
 
     .team_box,

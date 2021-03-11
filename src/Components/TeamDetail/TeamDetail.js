@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import { useParams } from "react-router";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./teamDetail.css";
 import male from "../../images/Photo/male.png";
 import female from "../../images/Photo/female.png";
@@ -18,6 +19,8 @@ import {
 const TeamDetail = () => {
   let { id } = useParams();
   const [teamDetails, setTeamDetails] = useState([]);
+
+  console.log(teamDetails);
 
   const {
     strTeam,
@@ -104,15 +107,32 @@ const TeamDetail = () => {
       </section>
 
       <section className="social_link p-3 container-xl d-flex justify-content-center">
-        <a href={strTwitter}>
+        <Link
+          to={{
+            pathname: `https://${strTwitter}`,
+          }}
+          target="_blank"
+        >
           <img className="social_logo" src={twitter} alt="" />
-        </a>
-        <a href={strFacebook}>
+        </Link>
+
+        <Link
+          to={{
+            pathname: `https://${strFacebook}`,
+          }}
+          target="_blank"
+        >
           <img className="social_logo" src={facebook} alt="" />
-        </a>
-        <a href={strYoutube}>
+        </Link>
+
+        <Link
+          to={{
+            pathname: `https://${strYoutube}`,
+          }}
+          target="_blank"
+        >
           <img className="social_logo" src={youtube} alt="" />
-        </a>
+        </Link>
       </section>
     </div>
   );

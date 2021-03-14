@@ -1,7 +1,13 @@
 import React from "react";
 import { Navbar, Form, FormControl, Nav, Button } from "react-bootstrap";
 
-const Navigation = () => {
+const Navigation = (props) => {
+  const { setSearchValue } = props;
+
+  const handleSearch = (event) => {
+    setSearchValue(event.target.value);
+  };
+
   return (
     <div className="navigation">
       <Navbar fixed="top" bg="dark" variant="dark" expand="lg">
@@ -20,8 +26,9 @@ const Navigation = () => {
                 type="text"
                 placeholder="Search"
                 className="mr-sm-2"
+                onChange={handleSearch}
               />
-              <Button variant="outline-danger">Search</Button>
+              <Button variant="outline-info">Search</Button>
             </Form>
           </Navbar.Collapse>
         </div>

@@ -7,14 +7,28 @@
 
 .root {
   min-height: 100vh;
+  background-color: #222831;
 }
 
 .nav_brand {
-  border: 1px solid whitesmoke;
   padding: .5rem 1rem;
   border-radius: 4px;
 }
 
 .navigation {
   font-weight: 300;
+}
+
+.navigation-bar {
+  background-color: #0f1021;
+}
+
+.main {
+  background-image: linear-gradient(to bottom, #0f1021, #0f10219c), url("./images/1401210.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
 }

@@ -103,7 +103,7 @@ const TeamDetail = () => {
             </div>
           </section>
 
-          <section className="team_description text-light p-4 bg-dark container-xl mt-4">
+          <section className="team_description text-light p-4 container-xl mt-4">
             <p className="mb-5">{strDescriptionEN} </p>
             <p>{strStadiumDescription} </p>
           </section>

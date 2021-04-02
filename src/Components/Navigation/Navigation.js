@@ -13,9 +13,14 @@ const Navigation = (props) => {
   const [loggedIn, setLoggedIn] = useContext(LoginContext);
 
   return (
-    <div className="navigation">
-      <Navbar fixed="top" bg="dark" variant="dark" expand="lg">
-        <div className="container-xl">
+    <div className="navigation ">
+      <Navbar
+        className="navigation-bar"
+        fixed="top"
+        variant="light"
+        expand="lg"
+      >
+        <div className="container-xl p-2">
           <Navbar.Brand className="text-light nav_brand" href="/">
             Team Affair
           </Navbar.Brand>
@@ -44,7 +49,7 @@ const Navigation = (props) => {
               <FormControl
                 type="text"
                 placeholder="Search"
-                className="mr-sm-2"
+                className="mr-sm-2 search"
                 onChange={handleSearch}
               />
               <Button variant="outline-info">Search</Button>

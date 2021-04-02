@@ -17,7 +17,7 @@ const TeamCard = (props) => {
 
   return (
     <div className="col-sm-6 col-md-4 col-lg-3 text-center d-flex justify-content-center align-items-center">
-      <Card className="myCard shadow text-light" bg="dark">
+      <Card className="myCard shadow-sm text-light">
         <Card.Img className="myCardImg" variant="top" src={strTeamBadge} />
 
         <Card.Body>
@@ -26,7 +26,7 @@ const TeamCard = (props) => {
           <Button
             className="myCardButton"
             onClick={() => handleDetails(idTeam)}
-            variant="info"
+            variant="outline-info"
           >
             Explore
             <span className="px-1">

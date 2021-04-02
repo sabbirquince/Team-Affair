@@ -20,7 +20,7 @@
     padding: 1rem 1rem 1rem 2rem;
     margin-top: 1.5rem;
     border-radius: 7px;
-    background-color: #1e5f74;
+    background-color: #233142;
 }
 
 .team_box h6 {
@@ -34,6 +34,7 @@
 .team_description {
     border-radius: 7px;
     font-weight: 300;
+    background-color: #141829;
 }
 
 .social_link {

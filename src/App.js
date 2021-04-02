@@ -5,7 +5,6 @@ import Navigation from "./Components/Navigation/Navigation";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import TeamDetail from "./Components/TeamDetail/TeamDetail";
 import React, { createContext, useState } from "react";
-import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Login from "./Components/Login/Login";
 
 // LOGIN CONTEXT
@@ -20,7 +19,7 @@ function App() {
 
   return (
     <Router>
-      <div className="bg-secondary root">
+      <div className=" root">
         <LoginContext.Provider value={[loggedIn, setLoggedIn]}>
           <Navigation setSearchValue={setSearchValue} />
 
@@ -37,9 +36,9 @@ function App() {
               <Login />
             </Route>
 
-            <PrivateRoute path="/team/:id">
+            <Route path="/team/:id">
               <TeamDetail />
-            </PrivateRoute>
+            </Route>
           </Switch>
         </LoginContext.Provider>
       </div>

@@ -23,7 +23,7 @@ const Main = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className="main">
       <Header />
 
       {teams?.length === 0 ? (
@@ -31,11 +31,13 @@ const Main = (props) => {
           <Spinner className="p-4" animation="grow" variant="light" />
         </div>
       ) : (
-        <div className="container-xl">
-          <div className="row mt-4">
-            {teams?.map((team) => (
-              <TeamCard key={team.idTeam} team={team} />
-            ))}
+        <div>
+          <div className="container-xl">
+            <div className="row mt-4">
+              {teams?.map((team) => (
+                <TeamCard key={team.idTeam} team={team} />
+              ))}
+            </div>
           </div>
         </div>
       )}

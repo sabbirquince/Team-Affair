@@ -1,0 +1,39 @@
+.login {
+    padding-top: 100px;
+    color: whitesmoke;
+}
+
+.input-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-field {
+    display: block;
+    width: 20rem;
+    height: 3rem;
+    text-align: center;
+    margin: .5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-error {
+    color: rgb(168, 48, 48);
+}
+
+.social-signin {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-btn {
+    padding: .75rem;
+    font-size: .75rem;
+    margin: .75rem;
+    border: none;
+    border-radius: 5px;
+}

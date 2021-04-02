@@ -10,6 +10,7 @@ const TeamCard = (props) => {
   const { strTeam, strTeamBadge, strSport, idTeam } = team || {};
 
   let history = useHistory();
+
   const handleDetails = (idTeam) => {
     history.push(`/team/${idTeam}`);
   };

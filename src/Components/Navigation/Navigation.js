@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Navbar, Form, FormControl, Nav, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { LoginContext } from "../../App";
 
 const Navigation = (props) => {
   const { setSearchValue } = props;
@@ -7,6 +9,8 @@ const Navigation = (props) => {
   const handleSearch = (event) => {
     setSearchValue(event.target.value);
   };
+
+  const [loggedIn, setLoggedIn] = useContext(LoginContext);
 
   return (
     <div className="navigation">
@@ -18,8 +22,23 @@ const Navigation = (props) => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="">Nothing</Nav.Link>
+              <Link className="px-2 text-light" to="/home">
+                Home
+              </Link>
+
+              {loggedIn?.email ? (
+                <Link
+                  onClick={() => setLoggedIn({})}
+                  className="px-2 text-light"
+                  to="/login"
+                >
+                  Log out
+                </Link>
+              ) : (
+                <Link className="px-2 text-light" to="/login">
+                  Log in
+                </Link>
+              )}
             </Nav>
             <Form inline>
               <FormControl

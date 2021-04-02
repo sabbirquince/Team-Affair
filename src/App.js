@@ -4,7 +4,7 @@ import Main from "./Components/Main/Main";
 import Navigation from "./Components/Navigation/Navigation";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import TeamDetail from "./Components/TeamDetail/TeamDetail";
-import react, { createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Login from "./Components/Login/Login";
 

@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import { Navbar, Form, FormControl, Nav, Button } from "react-bootstrap";
+import { Navbar, Form, FormControl, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { LoginContext } from "../../App";
+import logo from "../../images/logo.png";
 
 const Navigation = (props) => {
   const { setSearchValue } = props;
@@ -14,20 +15,15 @@ const Navigation = (props) => {
 
   return (
     <div className="navigation ">
-      <Navbar
-        className="navigation-bar"
-        fixed="top"
-        variant="light"
-        expand="lg"
-      >
+      <Navbar className="navigation-bar" fixed="top" variant="dark" expand="lg">
         <div className="container-xl p-2">
           <Navbar.Brand className="text-light nav_brand" href="/">
-            Team Affair
+            <img className="brand-logo" src={logo} alt="" /> Team Affair
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Link className="px-2 text-light" to="/home">
+              <Link className="px-2 py-3 py-lg-0 text-light" to="/home">
                 Home
               </Link>
 
@@ -49,10 +45,9 @@ const Navigation = (props) => {
               <FormControl
                 type="text"
                 placeholder="Search"
-                className="mr-sm-2 search"
+                className="mr-sm-2 mb-2 mb-lg-0 mt-2 mt-lg-0 search"
                 onChange={handleSearch}
               />
-              <Button variant="outline-info">Search</Button>
             </Form>
           </Navbar.Collapse>
         </div>

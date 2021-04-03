@@ -7,7 +7,7 @@
 
 .root {
   min-height: 100vh;
-  background-color: #222831;
+  background-image: linear-gradient(to bottom, #010101ef 50%, #222831 100%);
 }
 
 .nav_brand {
@@ -31,4 +31,17 @@
   position: relative;
   z-index: 10;
   min-height: 100vh;
+}
+
+.footer {
+  background-color: #0b0b0d;
+  padding: 2rem;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: lighter;
+}
+
+.brand-logo {
+  height: 2.5rem;
+  padding-bottom: .22rem;
 }

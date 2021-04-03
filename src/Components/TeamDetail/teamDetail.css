@@ -65,6 +65,6 @@
 
     .team_image {
         height: 12rem;
-        width: 100%;
+        padding: .5rem;
     }
 }

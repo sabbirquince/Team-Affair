@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import TeamDetail from "./Components/TeamDetail/TeamDetail";
 import React, { createContext, useState } from "react";
 import Login from "./Components/Login/Login";
+import Footer from "./Components/Footer/Footer";
 
 // LOGIN CONTEXT
 export const LoginContext = createContext();
@@ -42,6 +43,8 @@ function App() {
           </Switch>
         </LoginContext.Provider>
       </div>
+
+      <Footer />
     </Router>
   );
 }

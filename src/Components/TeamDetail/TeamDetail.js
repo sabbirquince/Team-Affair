@@ -49,7 +49,7 @@ const TeamDetail = () => {
     <div>
       {teamDetails.length === 0 ? (
         <div className="d-flex justify-content-center align-items-center m-5 p-5 spinner">
-          <Spinner className="p-5" animation="grow" variant="light" />
+          <Spinner className="p-3" animation="grow" variant="light" />
         </div>
       ) : (
         <div className="py-5 team_details">

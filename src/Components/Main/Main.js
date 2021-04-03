@@ -28,7 +28,7 @@ const Main = (props) => {
 
       {teams?.length === 0 ? (
         <div className="spinner d-flex justify-content-center p-5 m-5">
-          <Spinner className="p-4" animation="grow" variant="light" />
+          <Spinner className="p-3" animation="grow" variant="light" />
         </div>
       ) : (
         <div>

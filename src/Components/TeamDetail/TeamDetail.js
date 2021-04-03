@@ -46,7 +46,7 @@ const TeamDetail = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="mt-4">
       {teamDetails.length === 0 ? (
         <div className="d-flex justify-content-center align-items-center m-5 p-5 spinner">
           <Spinner className="p-3" animation="grow" variant="light" />
@@ -71,16 +71,16 @@ const TeamDetail = () => {
 
               <div className="team_info d-flex p-2">
                 <div>
-                  <span className="d-block px-2 mb-1">
+                  <span className="d-block px-2 mb-md-1">
                     <FontAwesomeIcon icon={faMapMarkerAlt} />
                   </span>
-                  <span className="d-block px-2 mb-1">
+                  <span className="d-block px-2 mb-md-1">
                     <FontAwesomeIcon icon={faFlag} />
                   </span>
-                  <span className="d-block px-2 mb-1">
+                  <span className="d-block px-2 mb-md-1">
                     <FontAwesomeIcon icon={faFutbol} />
                   </span>
-                  <span className="d-block px-2 mb-1">
+                  <span className="d-block px-2 mb-md-1">
                     <FontAwesomeIcon icon={faMars} />
                   </span>
                 </div>

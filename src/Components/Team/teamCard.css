@@ -20,4 +20,9 @@
     .myCard {
         width: 20rem;
     }
+
+    .myCardImg {
+        width: 40%;
+        padding-top: 1.5rem;
+    }
 }

@@ -8,6 +8,7 @@
 .root {
   min-height: 100vh;
   background-image: linear-gradient(to bottom, #010101ef 50%, #222831 100%);
+  font-size: 100%;
 }
 
 .nav_brand {
@@ -44,4 +45,10 @@
 .brand-logo {
   height: 2.5rem;
   padding-bottom: .22rem;
+}
+
+@media only screen and (max-width:750px) {
+  .root {
+    font-size: 78%;
+  }
 }

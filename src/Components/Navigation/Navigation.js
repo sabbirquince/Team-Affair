@@ -1,13 +1,16 @@
 import React, { useContext } from "react";
 import { Navbar, Form, FormControl, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { LoginContext } from "../../App";
 import logo from "../../images/logo.png";
 
 const Navigation = (props) => {
   const { setSearchValue } = props;
 
-  const handleSearch = (event) => {
+  let history = useHistory();
+
+  const HandleSearch = (event) => {
+    history.push("/home");
     setSearchValue(event.target.value);
   };
 
@@ -46,7 +49,7 @@ const Navigation = (props) => {
                 type="text"
                 placeholder="Search"
                 className="mr-sm-2 mb-2 mb-lg-0 mt-2 mt-lg-0 search"
-                onChange={handleSearch}
+                onChange={HandleSearch}
               />
             </Form>
           </Navbar.Collapse>

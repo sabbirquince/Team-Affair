@@ -7,7 +7,7 @@ const firebaseConfig = {
   projectId: "team-affiar",
   storageBucket: "team-affiar.appspot.com",
   messagingSenderId: "809032126854",
-  appId: "1:809032126854:web:2d48339f96dcef3faf1c07",
+  appId: "1:809032126854:web:6a16ae1b6cfc12d2af1c07",
 };
 
 // Initialize Firebase

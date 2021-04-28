@@ -1,10 +1,10 @@
-import "./App.css";
+import React, { createContext, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import Main from "./Components/Main/Main";
 import Navigation from "./Components/Navigation/Navigation";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import TeamDetail from "./Components/TeamDetail/TeamDetail";
-import React, { createContext, useState } from "react";
 import Login from "./Components/Login/Login";
 import Footer from "./Components/Footer/Footer";
 
